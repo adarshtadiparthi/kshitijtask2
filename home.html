@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Teasers: Unleash Your Puzzle Prowess</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homestyle.css">
+    <title>15 Puzzle game</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <img src="assets/Group 2.png" alt="" class="background">
-    <div class="nav">
+    <h1 class = "heading">The 15 Game</h1>
+    <div class="game" id = "game">
+        <div class="details">
+            <button class="new_game" id="new-game">New Game</button>
+            <div class="timer_and_moves">
+                <div class="timer">
+                    <p>Time:</p>
+                    <h2 id = "time">0:0</h2>
+                </div>
+                <div class="moves">
+                    <p>Moves:</p>
+                    <h2 id = "moves">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="gamebox">
+            <div class="box" id="box"></div>
+            <div class="play" id="play">
+                <button class="play_button" id="play-button"><i class="bi bi-caret-right" onclick="startTimer"></i></button>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="pause_timer" id="pause-button">Pause</button>
+            <button class="resume_timer" id="resume-button">Resume</button>
+        </div>
     </div>
-    <div class="intro">
-        <h1 class="title">Mind Teasers</h1>
-        <p>Games like You've Never Played Before</p>
+    <div class="win_stats" id = "win_stats">
+        <h1>You Win!</h1>
+        <p id = "move"></p>
+        <p id = "minutes"></p>
+        <div class="homenav">
+            <a href = "" class="new-game" id = "new_game">New Game</a>
+            <a href="home.html" class="home">Back to home</a>
+        </div>
     </div>
-    <div class="dimensions">
-        <button id = "option3" onclick="handleButtonClick(3)">3x3</button>
-        <button id = "option4" onclick="handleButtonClick(4)">4x4</button>
-        <button id = "option5" onclick="handleButtonClick(5)">5x5</button>
-    </div>
-    <div class="game15">
-        <img src="assets/favicon.png" alt="">
-        <a href="index.html">The 15 Game</a>
-    </div>
-    <div class="imageSlider">
-        <a href="image.html">Image Slider Puzzle</a>
-        <img src="assets/pngegg.png" alt="">
-    </div>
-    
-    <script src="home.js"></script>
+
+    <script src="timer.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
